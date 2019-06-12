@@ -6,7 +6,8 @@
   "scripts": {
     "test": "jest",
     "build": "babel src -d lib",
-    "styleguide": "styleguidist server"
+    "styleguide": "styleguidist server",
+    "styleguide:build": "styleguidist build"
   },
   "keywords": [
     "react",
