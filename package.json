@@ -1,6 +1,6 @@
 {
   "name": "u5-carbon-components-react",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Uber5's React Components for the Carbon Design System",
   "main": "lib/index.js",
   "scripts": {
