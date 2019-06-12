@@ -2,7 +2,7 @@
   "name": "components5-3",
   "version": "0.0.1",
   "description": "React carbon components for admin apps",
-  "main": "src/index.js",
+  "main": "lib/index.js",
   "scripts": {
     "test": "jest",
     "build": "babel src -d lib"
@@ -18,8 +18,16 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
   },
-  "devDependencies": {
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ]
+  },
+    "devDependencies": {
     "@babel/cli": "^7.4.4",
-    "@babel/core": "^7.4.5"
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-react": "^7.0.0"
   }
 }
