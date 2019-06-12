@@ -1,0 +1,16 @@
+{
+  "name": "components5-3",
+  "version": "0.0.1",
+  "description": "React carbon components for admin apps",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "react",
+    "carbon",
+    "components"
+  ],
+  "author": "chris@uber5.com",
+  "license": "ISC"
+}
