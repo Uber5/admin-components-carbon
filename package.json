@@ -5,6 +5,7 @@
   "main": "lib/index.js",
   "scripts": {
     "test": "jest",
+    "prepublish": "npm run build",
     "build": "babel src -d lib",
     "styleguide": "styleguidist server",
     "styleguide:build": "styleguidist build"
