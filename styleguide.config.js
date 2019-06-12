@@ -9,6 +9,7 @@ for (const c of carbonComponents) {
 }
 
 module.exports = {
+  styleguideDir: 'docs',
   sections: [
     {
       name: 'Introduction',
