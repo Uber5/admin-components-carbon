@@ -24,10 +24,12 @@
       "@babel/preset-react"
     ]
   },
-    "devDependencies": {
+  "devDependencies": {
     "@babel/cli": "^7.4.4",
     "@babel/core": "^7.4.5",
     "@babel/preset-env": "^7.4.5",
-    "@babel/preset-react": "^7.0.0"
+    "@babel/preset-react": "^7.0.0",
+    "react-styleguidist": "^9.1.6",
+    "webpack": "^4.33.0"
   }
 }
