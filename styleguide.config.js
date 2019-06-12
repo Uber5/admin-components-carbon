@@ -1,3 +1,13 @@
+const { readdirSync } = require('fs')
+const path = require('path')
+
+// make all (?) carbon components available in context
+const carbonComponents = readdirSync(path.join(__dirname, 'node_modules/carbon-components-react/lib/components'))
+const context = {}
+for (const c of carbonComponents) {
+  context[c] = path.resolve(__dirname, 'node_modules/carbon-components-react/lib/components', c)
+}
+
 module.exports = {
   sections: [
     {
@@ -26,10 +36,18 @@ module.exports = {
     {
       name: 'UI Components',
       content: 'docs/ui.md',
-      components: 'src/components/**/*.js',
+      components: 'src/components/**/[A-Z]*.js',
       exampleMode: 'expand', // 'hide' | 'collapse' | 'expand'
       usageMode: 'expand' // 'hide' | 'collapse' | 'expand'
     }
+  ],
+  context: context,
+  // TODO: moduleAliases not required for now, we add components we need to the context, see above
+  moduleAliases: {
+    'carbon-components-react': path.resolve(__dirname, 'node_modules/carbon-components-react')
+  },
+  require: [
+    path.join(__dirname, 'node_modules/carbon-components/css/carbon-components.min.css')
   ],
   webpackConfig: {
     module: {
