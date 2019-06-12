@@ -1,7 +1,7 @@
 {
-  "name": "components5-3",
+  "name": "u5-carbon-components-react",
   "version": "0.0.1",
-  "description": "React carbon components for admin apps",
+  "description": "Uber5's React Components for the Carbon Design System",
   "main": "lib/index.js",
   "scripts": {
     "test": "jest",
