@@ -1,0 +1,1 @@
+A column, part of the [Grid system](#grid).
