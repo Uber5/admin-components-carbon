@@ -1,11 +1,17 @@
 A button component, which makes it easier to use an icon with it.
 
+Other than the `icon` property, it supports all properties of the
+[standard Button](http://react.carbondesignsystem.com/?selectedKind=Buttons&selectedStory=Default&full=0&addons=1&stories=1&panelRight=0&addonPanel=storybooks%2Fstorybook-addon-knobs).
+
 ```js
 import { iconAddOutline, iconAdd } from 'carbon-icons';
 <>
   <IconButton icon={iconAddOutline}>With icon</IconButton>
   <IconButton icon={iconAdd}>With icon</IconButton>
   <IconButton>Without icon</IconButton>
+  <br /><br />
+  <IconButton small>Also small</IconButton>
+  <IconButton small icon={iconAdd}>Also small</IconButton>
 </>
 ```
 
