@@ -29,7 +29,6 @@ const IconsWithFilter = () => {
     <Grid>
       <Row>
         <TextInput type='text' placeholder='Filter by name' value={filter} onChange={e => {
-          console.log('e', e)
           setFilter(e.target.value)
         }} />
       </Row>
