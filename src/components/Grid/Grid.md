@@ -35,6 +35,27 @@ const SomeContent = () => (
 </Grid>
 ```
 
+Columns can have an offset:
+
+```js
+import Row from './Row';
+import Column from './Column';
+
+const SomeContent = () => (
+  <div style={{ backgroundColor: 'lightgreen' }}>
+    some content...
+  </div>
+);
+
+<Grid>
+  <Row>
+    <Column offset='lg-2' spec='lg-8'>
+      <SomeContent/>
+    </Column>
+  </Row>
+</Grid>
+```
+
 TODO:
 Until we figure out a better way, the following CSS is required to
 have columns without padding:

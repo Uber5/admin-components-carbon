@@ -2,7 +2,7 @@ import React from 'react'
 
 const breakpoints = ['sm', 'md', 'lg', 'xlg', 'max']
 
-export default ({ spec, ...props }) => {
+export default ({ spec, offset, ...props }) => {
   const specsArray = (spec || '').split(',').filter(s => s.length > 0)
   if (specsArray.length < 1) {
     throw new Error('no spec given, should be  "sm-4,lg-4" or similar.')
@@ -21,10 +21,21 @@ export default ({ spec, ...props }) => {
     }
   }
 
+  if (offset) {
+    const offsetSpec = offset.split('-')
+    if (offsetSpec.length !== 2) {
+      throw new Error(`
+        Invalid offset ${offsetSpec}, expected "breakpoint-dash-width",
+        e.g. "md-2", valid breakpoints are: ${breakpoints.join(', ')}
+      `)
+    }
+  }
+  
   const className = specsArray
     .map(s => {
       return `bx--col-${s}`
     })
     .join(' ')
+    + (offset ? ` bx--offset-${offset}` : '')
   return <div className={'bx--col-no-padding ' + className} {...props} />
 }
